@@ -20,7 +20,7 @@ app.use(cors({
 }))
 
 
-app.post("/login" , async(req,res) => {
+app.post("/signup" , async(req,res) => {
 
     const {email, password} = req.body;
     const userAvailable = await UserModel.findOne({email})
@@ -45,7 +45,7 @@ app.post("/login" , async(req,res) => {
 
 
 
-app.post("/signup" , async(req,res) => {
+app.post("/login" , async(req,res) => {
     const {email, password} = req.body;
 
     try{
