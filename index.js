@@ -6,12 +6,12 @@ const cors = require("cors");
 const {connection} = require("./config/db");
 const { UserModel } = require("./models/User.model");
 
-const {authenticate} = require("./Middlewares/authentication");
-const e = require("express");
+
+
 
 
 const app = express();
-
+const {authenticate} = require("./Middlewares/authentication");
 
 app.use(express.json())
 
